@@ -13,6 +13,7 @@ export const lang = {
     pattern: "Please match the requested format",
     equals: "The two fields do not match",
     "required-group": "こちらの項目は必須項目です",
+    "required-all": "こちらの項目は必須項目です",
     "integer-group": "は整数で入力してください",
     greater: "上限金額は下限金額よりも多く設定してください"
   }

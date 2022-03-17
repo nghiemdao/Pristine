@@ -90,6 +90,23 @@ _("required-group", {
   priority: 3,
   halt: true
 });
+_("required-all", {
+  fn: function () {
+    const formGroup = findAncestor(this, defaultConfig.classTo);
+    const inputs = formGroup.querySelectorAll("[data-pristine-required-all]:not([disabled]");
+    if (inputs.length === 0) {
+      return true;
+    }
+    for (let input of inputs) {
+      if (input.value === "") {
+        return false;
+      }
+    }
+    return true;
+  },
+  priority: 3,
+  halt: true
+});
 _("integer-group", {
   fn: function () {
     const formGroup = findAncestor(this, defaultConfig.classTo);
